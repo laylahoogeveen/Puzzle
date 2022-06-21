@@ -12,6 +12,7 @@ class Puzzle:
         # self.grid = self.list_to_grid(self.values, self.width)
         self.total_words = self.find_number_of_words()
         self.words_indices = self.make_word_indices()
+        # self.value_
 
     def find_number_of_words(self):
         '''Find the total number of words in puzzle'''
