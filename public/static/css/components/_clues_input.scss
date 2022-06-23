@@ -1,0 +1,19 @@
+// .answer {
+//     width: 90%;
+// }
+
+.hor_li, .ver_li {
+    font-weight: bold;
+}
+
+.clues {
+    overflow-y: auto;
+    // scrollbar-gutter: stable;
+    padding: 1em;
+    border: $accent $border-width solid;
+}
+
+
+.hidden-words {
+    @extend .clues;
+}

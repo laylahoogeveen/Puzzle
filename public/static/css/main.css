@@ -1,0 +1,136 @@
+table.grid {
+  table-layout: fixed;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  display: table;
+}
+
+table.grid td {
+  border: #000000 solid 2px;
+  border-collapse: collapse;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+}
+
+.clue_num {
+  position: absolute;
+  font-size: 0.8em;
+  color: #383c61;
+}
+
+.value {
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: 500;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.focused {
+  background-color: #fff2bc;
+  border: #2020B3 2px solid !important;
+  color: #2020B3;
+}
+
+.empty_block {
+  background-color: #383c61;
+  border: #000000 solid 2px;
+}
+.empty_block.left_border {
+  border-left-width: 2px;
+}
+.empty_block.no_bottom_border {
+  border-bottom-width: 0;
+}
+.empty_block.no_top_border {
+  border-top-width: 0;
+}
+.empty_block.no_right_border {
+  border-right-width: 0;
+}
+.empty_block.no_left_border {
+  border-left-width: 0;
+}
+
+.hor_li, .ver_li {
+  font-weight: bold;
+}
+
+.clues, .hidden-words {
+  overflow-y: auto;
+  padding: 1em;
+  border: #383c61 2px solid;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: "Karla", "Arial Nova", sans-serif;
+}
+
+h1 {
+  font-size: 1.8em;
+  color: #383c61;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #383c61;
+  text-align: center;
+  width: 100%;
+}
+
+.btn.btn-dark {
+  background-color: #383c61 !important;
+  margin: 1em;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border: 2px #383c61 solid;
+  border-right-width: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #383c61;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #513A6E;
+}
+
+.border-green {
+  border: green 2px solid;
+}
+.border-blue {
+  border: blue 2px solid;
+}
+.border-red {
+  border: red 2px solid;
+}
+.border-yellow {
+  border: yellow 2px solid;
+}
+
+.darkmode--activated {
+  color: #FFFFFF;
+}
+.darkmode--activated.clue_num {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=main.css.map */

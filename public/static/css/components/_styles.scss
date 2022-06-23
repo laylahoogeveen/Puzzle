@@ -1,0 +1,70 @@
+//Utilities
+
+body {
+    background-color: #FFFFFF;
+    color: $text;
+    font-family: "Karla", "Arial Nova", sans-serif;
+}
+
+
+h1 {
+    font-size: 1.8em;
+    color: $accent;
+    text-align: center;
+}
+    
+h2 {
+    font-size: 1.2em;
+    color: $accent;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    &.btn-dark {
+        background-color: $accent !important;
+        margin: 1em;
+    }
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    border: $border-width $accent solid;
+    border-right-width: 0;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $accent;
+    // border: $border-width $accent solid;
+    // box-shadow: inset $border-half $border-width #FFFFFF;
+
+    // border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $accent_dark;
+}
+
+.border {
+    &-green {
+        border: green 2px solid;
+    }
+    &-blue {
+        border: blue 2px solid;
+    }
+    &-red {
+        border: red 2px solid;
+    }
+    &-yellow {
+        border: yellow 2px solid;
+    }
+}

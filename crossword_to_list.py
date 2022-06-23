@@ -32,7 +32,7 @@ class Puzzle:
                 for i in range(len(self.values)):
                     if self.values[i] == index:
                         if step == 1:
-                            location = list(range(i, (i + word_length - 1), step))
+                            location = list(range(i, (i + word_length), step))
                         else:
                             location = list(range(i, (i + (word_length * step)), step))
                 
