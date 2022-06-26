@@ -9,29 +9,30 @@ function addToGrid(index, value) {
     $(elem).html(value);
 }
 
-function findDoubleCells(clueNum, cells, input) {
+function findDoubleCells(clueNum, cell, input) {
     // Return cells that intersect with multiple words
 
-    for (let i=0; i < cells.length; i++) {
-        var classes = getCellFromID(cells[i]).classList;
-        var classesArray = checkClass(classes);
-        // console.log(classesArray);
+    var classes = getCellFromID(cell).classList;
+    var classesArray = checkClass(classes);
 
-        for (var j=0; j < classesArray.length; j++) {
-            var clue_index = getIDAndLetterIndex(classesArray[j]);
-            var form_clue = clue_index[0];
-            var index = clue_index[1];
+    for (var j=0; j < classesArray.length; j++) {
+        var clue_index = getIDAndLetterIndex(classesArray[j]);
+        var form_clue = clue_index[0];
+        var index = clue_index[1];
 
-            var form = findForm(form_clue);
-            // if (form_clue != clueNum) {
-                if (input[i] != null) {
-                    showCurrentVal(form, index, input[i]);
-                }
-            // }
-            
-        }
+        var form = findForm(form_clue);
+            if (input != null) {
+                var vals = showCurrentVal(form, index, input);
+                vals.push(form_clue);
+            }
     }
-
+    if (vals[2] != clueNum && vals[0] != vals[1]) {
+        return [vals[0], vals[2]];
+    }
+    else {
+        return "";
+        
+    }
 }
 
 function getIDAndLetterIndex(className) {
@@ -83,28 +84,42 @@ function showInGrid(clueNum, input, wordLength) {
     var padding = "-".repeat(padding_length);
     var input = input.concat(padding);
 
-    for (let i=0; i < cells.length; i++){
+    for (var i=0; i < cells.length; i++) {
+
         if (input[i].match(/[a-z]/i)) {
             addToGrid(cells[i], input[i]);
         }
         else {
-            addToGrid(cells[i], ""); 
+                var classes = getCellFromID(cells[i]).classList;
+                var classesArray = checkClass(classes);
+                if (classesArray.length > 1 ) {
+                    for (var j = 0; j < classesArray.length; j++) {
+                        
+                        var clue_index = getIDAndLetterIndex(classesArray[j]);
+                        var form_clue = clue_index[0];
+                        var indexje = clue_index[1];
+                        if (form_clue != clueNum) {
+                            var form = findForm(form_clue);
+    
+                            if (form.value[indexje] == null) {
+                                addToGrid(cells[i], ""); 
+                            }
+
+                            // if backspace or not finished, do not change if intersecting word has value
+                            if (form.value[indexje] != null) {
+                                addToGrid(cells[i], form.value[indexje]); 
+                            }
+                        }
+                    }
+                }
+                // else {
+                //     addToGrid(cells[i], ""); 
+                // }
         }
     }
 
-    doubles = findDoubleCells(clueNum, cells, input);
+    // for (var j = 0; j < cells.length; j++) {
+    //     doubles = findDoubleCells(clueNum, cells[j], input[j]);
+    // }
 
 }
-
-
-
-// function inputToGrid(event) {
-//     var btn = document.getElementById("myBtn")
-//     btn.addEventListener("click", btnClick, false)
-//     if (event.type == 'oninput') {
-//         showInGrid()
-//       /* handle a full screen toggle */
-//     } else /* fullscreenerror */ {
-//       /* handle a full screen toggle error */
-//     }
-//   }

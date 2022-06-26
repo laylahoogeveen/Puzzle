@@ -16,4 +16,29 @@
 
 .hidden-words {
     @extend .clues;
+    max-height: 60vh;
+}
+
+
+#new-values {
+    // position: absolute;
+    margin-top: 1em;
+    display: none;
+    visibility: hidden;
+    // top: 0;
+    // right: 0;
+    max-height: 60vh;
+    padding: 1em;
+    background-color: #FFFFFF;
+    overflow: auto; /* Enable scroll if needed */
+    border: $border-width $accent solid;
+}
+
+// .send-form {
+//     // border: $accent $border-width solid;
+// }
+
+.hideDiv {
+    display: none;
+    visibility: hidden;
 }

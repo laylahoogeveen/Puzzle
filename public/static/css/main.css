@@ -67,6 +67,27 @@ table.grid td {
   border: #383c61 2px solid;
 }
 
+.hidden-words {
+  max-height: 60vh;
+}
+
+#new-values {
+  margin-top: 1em;
+  display: none;
+  visibility: hidden;
+  max-height: 60vh;
+  padding: 1em;
+  background-color: #FFFFFF;
+  overflow: auto;
+  /* Enable scroll if needed */
+  border: 2px #383c61 solid;
+}
+
+.hideDiv {
+  display: none;
+  visibility: hidden;
+}
+
 body {
   background-color: #FFFFFF;
   color: #000000;
@@ -79,6 +100,22 @@ h1 {
   text-align: center;
 }
 
+.vh-10 {
+  height: 10vh;
+}
+.vh-15 {
+  height: 15vh;
+}
+.vh-20 {
+  height: 20vh;
+}
+.vh-70 {
+  height: 70vh;
+}
+.vh-80 {
+  height: 80vh;
+}
+
 h2 {
   font-size: 1.2em;
   color: #383c61;
@@ -89,6 +126,16 @@ h2 {
 .btn.btn-dark {
   background-color: #383c61 !important;
   margin: 1em;
+}
+.btn.btn-dark:hover {
+  background-color: #513A6E !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.btn.btn-dark:active {
+  background-color: #513A6E !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 /* Designing for scroll-bar */
@@ -111,6 +158,71 @@ h2 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #513A6E;
+}
+
+/* The Modal (background) */
+.result-modal {
+  display: none;
+  /* Hidden by default */
+  visibility: hidden;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: #FFFFFF;
+  /* Fallback color */
+  background-color: rgba(56, 60, 97, 0.5);
+  /* Black w/ opacity */
+}
+
+#modal-text {
+  overflow-y: scroll;
+  /* Enable scroll if needed */
+  padding: 1em;
+}
+#modal-text::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border: none !important;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  padding: 0;
+  background-color: #FFFFFF;
+  margin: 10vh auto 10vh auto;
+  /* 15% from the top and centered */
+  max-height: 80vh;
+  width: max-content;
+  overflow: auto;
+  /* Enable scroll if needed */
+  border: 2px #383c61 solid;
+}
+
+.no-display {
+  opacity: 0;
+  font-size: 0;
+  color: #FFFFFF;
+}
+
+/* The Close Button */
+.close-modal {
+  color: #383c61;
+  float: right;
+  position: sticky;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+.close-modal:hover, .close-modal:focus {
+  color: #513A6E;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .border-green {
