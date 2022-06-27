@@ -1,0 +1,167 @@
+//Utilities
+
+body {
+    background-color: #FFFFFF;
+    color: $text;
+    font-family: "Karla", "Arial Nova", sans-serif;
+}
+
+
+h1 {
+    font-size: 1.8em;
+    color: $accent;
+    text-align: center;
+}
+
+.vh {
+    &-10 {
+        height: 10vh;
+    }
+    &-15 {
+        height: 15vh;
+    }
+    &-20 {
+        height: 20vh;
+    }
+    &-70 {
+        height: 70vh;
+    }
+    &-80 {
+        height: 80vh;
+    }
+}
+    
+h2 {
+    font-size: 1.2em;
+    color: $accent;
+    text-align: center;
+    width: 100%;
+}
+
+.btn {
+    &.btn-dark {
+        background-color: $accent !important;
+        margin: 1em;
+        
+        &:hover {
+            background-color: $accent_dark !important;
+            box-shadow: none !important;
+            outline: none !important;
+
+        }
+        
+        &:active {
+            background-color: $accent_dark !important;
+            box-shadow: none !important;
+            outline: none !important;
+        }
+    }
+
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    border: $border-width $accent solid;
+    border-right-width: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $accent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $accent_dark;
+}
+
+/* The Modal (background) */
+.result-modal {
+    display: none; /* Hidden by default */
+    visibility: hidden;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #FFFFFF; /* Fallback color */
+    background-color: rgba(56, 60, 97, 0.5); /* Black w/ opacity */
+  }
+
+  #modal-text {
+    overflow-y: scroll; /* Enable scroll if needed */
+    padding: 1em;
+    &::-webkit-scrollbar-track {
+        background: #FFFFFF;
+        border: none !important;
+    }
+    
+
+  }
+  
+
+  /* Modal Content/Box */
+  .modal-content {
+    padding: 0;
+    background-color: #FFFFFF;
+    margin: 10vh auto 10vh auto; /* 15% from the top and centered */
+    max-height: 80vh;
+    width: max-content;
+    overflow: auto; /* Enable scroll if needed */
+    border: $border-width $accent solid;
+
+  }
+
+  .no-display {
+    opacity: 0;
+    font-size: 0;
+    color: #FFFFFF;
+  }
+
+//   @media screen and (orientation:landscape) {
+//     .modal-content {
+//         max-width: 50vw;
+//     }
+//   }
+  
+//   ul {
+//     .results_list {
+//         list-style-type: none;
+//     }
+//   }
+  /* The Close Button */
+  .close-modal {
+    color: $accent;
+    float: right;
+    position: sticky;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    &:hover, &:focus {
+        color: $accent_dark;
+        text-decoration: none;
+        cursor: pointer;
+    }
+  }  
+
+.border {
+    &-green {
+        border: green 2px solid;
+    }
+    &-blue {
+        border: blue 2px solid;
+    }
+    &-red {
+        border: red 2px solid;
+    }
+    &-yellow {
+        border: yellow 2px solid;
+    }
+}
