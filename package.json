@@ -2,11 +2,11 @@
   "name": "kruiswoord",
   "version": "1.0.0",
   "description": "puzzle app",
-  "main": "web.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node web.js",
-    "dev": "nodemon web.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
