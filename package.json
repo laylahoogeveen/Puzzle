@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/laylahoogeveen/Puzzle#readme",
   "dependencies": {
+    "body-parser": "*",
     "express": "^4.18.1",
-    "body-parser":"*",
-    "nodejs": "^0.0.0"
+    "nodejs": "^0.0.0",
+    "pug": "^3.0.2"
+
   },
   "devDependencies": {
     "pug": "^3.0.2"
