@@ -1,5 +1,5 @@
 {
-  "name": "puzzle",
+  "name": "kruiswoord",
   "version": "1.0.0",
   "description": "puzzle app",
   "main": "app.js",
@@ -23,7 +23,7 @@
     "nodejs": "^0.0.0"
   },
   "devDependencies": {
-    "pug": "3.0.2"
+    "pug": "^3.0.2"
   },
   "engines": {
     "node": "16.15.1",
