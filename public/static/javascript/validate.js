@@ -38,6 +38,7 @@ function getNonEmptyValue(element) {
 // }
 
 function showCorrection(points, totalPoints) {
+// Create message showing incorrect words
     
     var message = "<p>Je hebt " + points + " van de " + totalPoints + " punten behaald.</p>";
     var words = document.getElementsByClassName('answer');
@@ -46,7 +47,6 @@ function showCorrection(points, totalPoints) {
     var incorrectWords = [];
 
     for (var i = 0; i < words.length; i++) {   
-        // console.log(i + words[i].value);
         var word_index = findFormIndex(words[i]);
         if (words[i].value != null) {
           if (words[i].value.toUpperCase() != puz.allWords[word_index].toUpperCase()) {
