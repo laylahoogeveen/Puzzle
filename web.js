@@ -5,7 +5,7 @@ const app = express();
 app.use(express.static('public'));
 const json_puzzle = require('./json/modified/1.json');
 
-app.engine('pug', require('pug').__express);
+app.engine('pug', require('pug'));
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/public/views');
 
