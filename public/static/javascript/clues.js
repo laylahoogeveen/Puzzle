@@ -89,7 +89,7 @@ function hideWord(event) {
     var divID = 'clue-group-' + num;
     var move_back = "Verplaats woord " + num + "weer naar hoofdlijst";
     num = this.id.match(numberPattern);
-    if (this.innerHTML != move_back) {
+    if (this.innerHTML != "Naar hoofdlijst") {
         findNearestClue(divID, num, "hidden_word_list");
         this.innerHTML = "Naar hoofdlijst";
         this.setAttribute("aria-label", move_back);
@@ -112,6 +112,10 @@ function findNearestClue(divID, clueNum, location) {
     hideDiv();
     findLocation();
     showDiv();
+
+    function hideDiv() {
+        $(divID).hide();
+    }
 
     function findLocation() {
         if (clueNum == 1) {
@@ -139,9 +143,7 @@ function findNearestClue(divID, clueNum, location) {
         }
     }
 
-    function hideDiv() {
-        $(divID).hide();
-    }
+
     function showDiv() {
         $(divID).show(100);
     }
@@ -237,13 +239,23 @@ function newValue(event) {
             changes.push(doubles);
         }
     var changes = changes.sort((a, b) => a[1] - b[1]); 
-    makeChangesList(changes);
+    for (var i = 0; i < changes.length; i++) {
+        if (changes[i] == "") {
+
+        }
+    }
+
+    var changes = changes.filter(function(e) { return e !== '' });
+    if (changes.length > 0) {
+        makeChangesList(changes);
+    }
 }
 
 function makeChangesList(changes) {
 // Make list of all values that have changed after user input
 
     var content = '<h2>Veranderingen</h2>';
+
     content += '<p>De volgende woorden bevatten nieuwe letters: ';
     content += '<ul class="changes_list" role="list">';
     for (var i = 0; i < changes.length; i++) {
@@ -253,8 +265,7 @@ function makeChangesList(changes) {
             var newValue = changes[i][0];
             var clue = puz.allClues[clueNum];
             content += clueNum + ". " + clue + ": ";
-            var string = " piep";
-            var accessibleSound = newValue.replace(/-/g, string);
+            var accessibleSound = makeAriaString(newValue);
             // content += '<label>';
             content += '<span role="contentinfo" class="change_announcement" aria-hidden="true">';
             // aria-labelledby="announcement-' + clueNum + '">';
@@ -266,7 +277,6 @@ function makeChangesList(changes) {
         }
     }
 
-    // makeAriaLabel 
     content += '</ul></p>';
 
     var alertWindow = document.getElementById("new-values");
@@ -289,9 +299,17 @@ function initAriaLabels() {
 
 function makeAriaLabel (htmlElement) {
     // Make sure that it is read in an accessible way, as dashes are not pronounced by screen readers
-    var string = " piep";
-    var accessible_sound = htmlElement.innerHTML.replace(/-/g, string);
+    var accessible_sound = makeAriaString(htmlElement.innerHTML);
     $(htmlElement).attr("aria-label", accessible_sound);
+}
+
+function makeAriaString (value) {
+    var string = "piep";
+    var accessible_sound = value;
+    if (value.includes("-")) {
+        accessible_sound = value.split("").join(" ").replace(/-/g, string).toUpperCase();
+    }
+    return accessible_sound;
 }
 
 String.prototype.replaceAt = function(index, replacement) {

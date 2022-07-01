@@ -1,0 +1,69 @@
+  @media screen and (orientation:portrait) {
+    .col-6 {
+        width: 100vw;
+    }
+
+    .col-3 {
+        width: 100vw;
+        margin-top: 1em;
+        margin-bottom: 1em;
+
+    }
+
+    .col-2 {
+        width: 100vw;
+    }
+
+    .modal-content {
+        max-width: 90vw;
+    }
+
+    
+    // .col-2 {
+    //     &.vh-80 {
+    //         height: fit-content;
+    //     }
+    // }
+
+    .row {
+        &.vh-10 {
+            height: fit-content;
+        }
+    }
+
+    .row {
+        &.vh-80 {
+            height: fit-content;
+        }
+    }
+
+    .hidden-words-col {
+        height: fit-content;
+
+    }
+    // .col-3 {
+    //     &.vh-80 {
+    //         height: fit-content;
+    //     }
+    // }
+  }
+
+@media screen and (max-width: 750px) {
+
+    .clue_num {
+        font-size: 0.6em;
+    }
+    /* CSS rules here for screens lower than 750px */
+}
+
+  
+
+@media screen and (max-width: 1020px) {
+
+    .clue_num {
+        font-size: 0.7em;
+    }
+    /* CSS rules here for screens lower than 750px */
+}
+
+  

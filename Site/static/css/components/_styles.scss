@@ -1,0 +1,61 @@
+//Utilities
+
+body {
+    background-color: $light;
+    color: $text;
+    font-family: "Karla", "Arial Nova", sans-serif;
+}
+
+.clues {
+    overflow-y: overlay;
+    padding: 1em;
+    border: $accent $border-width solid;
+}
+
+.btn {
+    &.btn-dark {
+        background-color: $accent !important;
+        margin: 1em;
+    }
+}
+    
+// /* Designing for scroll-bar */
+// ::-webkit-scrollbar {
+//     width: 6px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: gainsboro;
+//     border-radius: 5px;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: black;
+//     border-radius: 5px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #555;
+
+.bg_red {
+    background-color: red !important;
+}
+
+.bg_green {
+    background-color: green !important;
+}
+
+.border{
+    &_green {
+        border: 1px solid green;
+    }
+    &_blue {
+        border: 1px solid blue;
+    }
+    &_red {
+        border: 1px solid red;
+    }
+}

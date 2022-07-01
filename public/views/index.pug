@@ -28,6 +28,7 @@ html(lang='nl')
     script(src='static/javascript/grid/make_grid.js')
     script(src='static/javascript/grid/modify_grid.js')
     script(src='static/javascript/clues.js')
+    script(src='static/javascript/instructions.js')
     //- script(src='static/javascript/dark_mode.js')  
     script(src='static/javascript/validate.js')
   
@@ -44,7 +45,7 @@ html(lang='nl')
   
 
       //- grid
-      .col-7.d-flex.align-content-center.flex-wrap(aria-hidden='true')
+      .col-6.d-flex.align-content-center.flex-wrap.overflow-overlay(aria-hidden='true')
         #table
       
 
@@ -59,7 +60,7 @@ html(lang='nl')
                 //- (type='submit')
 
       //- hidden words
-      .col-2.vh-80.align-items-center.justify-content-center
+      .col-2.vh-80.align-items-center.justify-content-center.hidden-words-col
         .row
           .col
             div.hidden-words
@@ -72,16 +73,31 @@ html(lang='nl')
 
     //- bottom row
     .row.vh-10
-      .col-7
-
-      .col-3
+      .col-6
+  	
+      .col-3.send
         .send-form.text-center
-          button#submit_solution.btn.btn-dark.w-75 Verstuur antwoorden
-      .col-2
+          button#submit_solution.btn.btn-dark.w-100 Verstuur antwoorden
+      .col-2.send
+        .send-form.text-center
+          button#instructions.btn.btn-dark.w-100(onclick="createInstructions()") Instructies
         #myModal.result-modal
           .modal-div
             .modal-content
               span.close-modal
                 span.material-symbols-outlined.close(aria-label="Sluit") close
               p#modal-text(role="alert", aria-live="polite")
-
+        #instructionModal.instruction-modal
+          .instruction-modal-div
+            .instruction-modal-content
+              span.instruction-close-modal
+                span.material-symbols-outlined.close(aria-label="Sluit") close
+              div#instruction-modal-text(role="alert", aria-live="polite")
+                h2 Welkom
+                p Op deze pagina vind je een prototype van een digitale kruiswoordpuzzel. De puzzel is ontworpen met het doel dat hij goed werkt in combinatie met een schermlezer. 
+                p De aanwijzingen, inclusief invoervelden voor de oplossing, worden als een lijst gepresenteerd. Hoewel er een raster aanwezig is op het scherm, heb je dit niet nodig om de puzzel op te lossen. Telkens wanneer je een woord invoert en naar een volgend veld navigeert, wordt er aangekondigd welke van de andere woorden er nieuwe letters bevatten als gevolg van jouw laatste zet. Om verwarring te voorkomen, zijn de woorden doorgenummerd en spreken we ook niet van horizontaal en verticaal. Leegtes in een woord, oftewel lege vakjes in het raster, worden aangekondigd door middel van een "piep" geluid, bijvoorbeeld "Huidige letters: P piep piep Z piep L". 
+                p Het kan tijdens het oplossen vervelend zijn om door alle woorden te moeten navigeren. Daarom heb je de optie om elk woord, bijvoorbeeld als je hem al hebt ingevuld, te verplaatsen naar de kolom genaamd "Verborgen woorden". Deze kun je ook weer terug plaatsen in de hoofdlijst. Veranderingen in het woord worden hoe dan ook voorgelezen, ongeacht de kolom waarin ze staan.
+                p Tenslotte is het belangrijk dat voor elk woord het invoervakje is ingevuld. Ook als de huidige letters een volledig woord vormen als gevolg van vorige zetten, dien je de juiste oplossing in te vullen. De invoervelden worden namelijk gecontroleerd als je je oplossing verstuurt met de knop "Verstuur antwoorden". Nadat je je antwoorden hebt verstuurd, wordt je totale score en de lijst van incorrecte woorden voorgelezen.
+                p Veel puzzelplezier!
+                p.text-center 
+                  button#close-instructions.btn.btn-dark Sluit dit venster

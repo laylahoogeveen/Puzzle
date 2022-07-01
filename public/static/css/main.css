@@ -125,7 +125,8 @@ h2 {
 
 .btn.btn-dark {
   background-color: #383c61 !important;
-  margin: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 .btn.btn-dark:hover {
   background-color: #513A6E !important;
@@ -243,6 +244,115 @@ h2 {
 }
 .darkmode--activated.clue_num {
   color: #FFFFFF;
+}
+
+/* The Modal (background) */
+.instruction-modal {
+  display: none;
+  /* Hidden by default */
+  visibility: hidden;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: #FFFFFF;
+  /* Fallback color */
+  background-color: rgba(56, 60, 97, 0.5);
+  /* Black w/ opacity */
+}
+
+#instruction-modal-text {
+  overflow-y: scroll;
+  /* Enable scroll if needed */
+  padding: 1em;
+}
+#instruction-modal-text::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border: none !important;
+}
+
+/* Modal Content/Box */
+.instruction-modal-content {
+  padding: 1em;
+  background-color: #FFFFFF;
+  margin: 10vh auto 10vh auto;
+  /* 15% from the top and centered */
+  max-height: 80vh;
+  overflow: auto;
+  /* Enable scroll if needed */
+  border: 2px #383c61 solid;
+}
+
+@media screen and (orientation: landscape) {
+  .instruction-modal-content {
+    max-width: 50vw;
+  }
+}
+/* The Close Button */
+.instruction-close-modal {
+  color: #383c61;
+  float: right;
+  position: absolute;
+  padding: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+.instruction-close-modal:hover, .instruction-close-modal:focus {
+  color: #513A6E;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+  .col-6 {
+    width: 100vw;
+  }
+
+  .col-3 {
+    width: 100vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .col-2 {
+    width: 100vw;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+  }
+
+  .row.vh-10 {
+    height: fit-content;
+  }
+
+  .row.vh-80 {
+    height: fit-content;
+  }
+
+  .hidden-words-col {
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 750px) {
+  .clue_num {
+    font-size: 0.6em;
+  }
+
+  /* CSS rules here for screens lower than 750px */
+}
+@media screen and (max-width: 1020px) {
+  .clue_num {
+    font-size: 0.7em;
+  }
+
+  /* CSS rules here for screens lower than 750px */
 }
 
 /*# sourceMappingURL=main.css.map */

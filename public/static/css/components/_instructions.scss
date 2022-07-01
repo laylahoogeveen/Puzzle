@@ -1,0 +1,59 @@
+
+/* The Modal (background) */
+.instruction-modal {
+    display: none; /* Hidden by default */
+    visibility: hidden;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #FFFFFF; /* Fallback color */
+    background-color: rgba(56, 60, 97, 0.5); /* Black w/ opacity */
+  }
+
+  #instruction-modal-text {
+    overflow-y: scroll; /* Enable scroll if needed */
+    padding: 1em;
+    &::-webkit-scrollbar-track {
+        background: #FFFFFF;
+        border: none !important;
+    }
+    
+  }
+  
+
+  /* Modal Content/Box */
+  .instruction-modal-content {
+    padding: 1em;
+    background-color: #FFFFFF;
+    margin: 10vh auto 10vh auto; /* 15% from the top and centered */
+    max-height: 80vh;
+    overflow: auto; /* Enable scroll if needed */
+    border: $border-width $accent solid;
+
+  }
+
+    @media screen and (orientation:landscape) {
+    .instruction-modal-content {
+        max-width: 50vw;
+    }
+  }
+  
+
+
+  /* The Close Button */
+  .instruction-close-modal {
+    color: $accent;
+    float: right;
+    position: absolute;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    &:hover, &:focus {
+        color: $accent_dark;
+        text-decoration: none;
+        cursor: pointer;
+    }
+  }  

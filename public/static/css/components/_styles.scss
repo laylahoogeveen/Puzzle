@@ -41,7 +41,8 @@ h2 {
 .btn {
     &.btn-dark {
         background-color: $accent !important;
-        margin: 1em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
         
         &:hover {
             background-color: $accent_dark !important;

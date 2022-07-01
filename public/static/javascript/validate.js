@@ -39,8 +39,9 @@ function getNonEmptyValue(element) {
 
 function showCorrection(points, totalPoints) {
 // Create message showing incorrect words
-    
-    var message = "<p>Je hebt " + points + " van de " + totalPoints + " punten behaald.</p>";
+    var percentage = Math.round((points / totalPoints) * 100);
+    var message = "<div class='text-center'><p>Je hebt " + points + " van de " + totalPoints + " punten behaald. Dat is een score van " + percentage + "%!</p>";
+    message += '<button class="btn btn-dark "  onclick="whatsapp(' + percentage + ')"> Deel score op Whatsapp </button>';
     var words = document.getElementsByClassName('answer');
     var words = Array.from(words).sort((a, b) => findFormIndex(a) - findFormIndex(b));
     
@@ -58,7 +59,7 @@ function showCorrection(points, totalPoints) {
             }
         }
     }
-    message += "<p> Incorrecte woorden waren:";
+    message += "<p>Incorrecte woorden waren: </p> </div>";
     message += "<ul class='results_list'>";
     
 
@@ -132,3 +133,11 @@ function alertResult(message) {
         }
     }
 }
+
+
+function whatsapp(percentage) {
+    var text = "Ik heb zojuist een score van " + percentage + "% behaald met de kruiswoordpuzzel van vandaag! Ga naar https://layla.nl/kruiswoord.html om hem ook op te lossen.";
+    window.open
+('whatsapp://send?text=' + text)
+}
+

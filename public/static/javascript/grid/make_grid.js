@@ -35,6 +35,7 @@ window.onload = (event) =>{
     populateBoxes();
     cellSize();
     addCellClass();
+    createInstructions();
 };
 
 function addCellClass() {
