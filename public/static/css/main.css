@@ -309,23 +309,27 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait) and (max-width: 1050px) {
   .col-6 {
     width: 100vw;
+    max-width: 100vw !important;
   }
 
   .col-3 {
     width: 100vw;
     margin-top: 1em;
     margin-bottom: 1em;
+    max-width: 100vw !important;
   }
 
   .col-2 {
     width: 100vw;
+    max-width: 100vw !important;
   }
 
   .modal-content {
     max-width: 90vw;
+    max-width: 90vw !important;
   }
 
   .row.vh-10 {
@@ -340,19 +344,40 @@ h2 {
     height: fit-content;
   }
 }
-@media screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
   .clue_num {
     font-size: 0.6em;
   }
 
   /* CSS rules here for screens lower than 750px */
 }
-@media screen and (max-width: 1020px) {
+@media only screen and (max-width: 1020px) {
   .clue_num {
     font-size: 0.7em;
   }
 
   /* CSS rules here for screens lower than 750px */
+  .col-6 {
+    width: 100vw;
+    max-width: 100vw !important;
+  }
+
+  .col-3 {
+    width: 100vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 100vw !important;
+  }
+
+  .col-2 {
+    width: 100vw;
+    max-width: 100vw !important;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+    max-width: 90vw !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
