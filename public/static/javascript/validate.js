@@ -94,6 +94,7 @@ function showCorrection(points, totalPoints) {
 
 
 function alertResult(message) {
+    // Show message with results
     
     // Get the modal
     var modal = document.getElementById("myModal");

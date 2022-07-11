@@ -1,3 +1,17 @@
+window.addEventListener('resize', function(event) {
+    cellSize();
+}, true);
+
+function redirecter(){
+    var loc = window.location.href+'';
+    if (loc.indexOf('http://www.')==0){
+         window.location.href = loc.replace('http://www.','https://');
+    }
+    else if (loc.indexOf('http://')==0) {
+        window.location.href = loc.replace('http://','https://');
+    }
+ }
+
 class Puzzle {
     constructor(json) {
         this.json = json;
@@ -35,7 +49,6 @@ window.onload = (event) =>{
     populateBoxes();
     cellSize();
     addCellClass();
-    createInstructions();
 };
 
 function addCellClass() {

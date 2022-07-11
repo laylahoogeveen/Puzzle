@@ -67,15 +67,11 @@ table.grid td {
   border: #383c61 2px solid;
 }
 
-.hidden-words {
-  max-height: 60vh;
-}
-
 #new-values {
   margin-top: 1em;
   display: none;
   visibility: hidden;
-  max-height: 60vh;
+  overflow-y: auto;
   padding: 1em;
   background-color: #FFFFFF;
   overflow: auto;
@@ -83,9 +79,21 @@ table.grid td {
   border: 2px #383c61 solid;
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.flex-height {
+  flex: 1;
+}
+
 .hideDiv {
   display: none;
   visibility: hidden;
+}
+
+ul.changes_list {
+  padding-left: 8px;
 }
 
 body {
@@ -109,11 +117,45 @@ h1 {
 .vh-20 {
   height: 20vh;
 }
+.vh-30 {
+  height: 30vh;
+}
+.vh-50 {
+  height: 50vh;
+}
 .vh-70 {
   height: 70vh;
 }
 .vh-80 {
   height: 80vh;
+}
+
+.mh-25 {
+  max-height: 25vh;
+}
+.mh-30 {
+  max-height: 30vh;
+}
+.mh-31 {
+  max-height: 31vh;
+}
+.mh-32 {
+  max-height: 32vh;
+}
+.mh-44 {
+  max-height: 44vh;
+}
+.mh-45 {
+  max-height: 45vh;
+}
+.mh-46 {
+  max-height: 46vh;
+}
+.mh-47 {
+  max-height: 47vh;
+}
+.mh-50 {
+  max-height: 50vh;
 }
 
 h2 {
@@ -240,10 +282,44 @@ h2 {
 }
 
 .darkmode--activated {
+  font-weight: 500;
+  color: #0c0c6d;
+}
+
+.darkmode--activated div.clue_num {
   color: #FFFFFF;
 }
-.darkmode--activated.clue_num {
-  color: #FFFFFF;
+
+.darkmode--activated input.form-control {
+  border: #383c61 2px solid !important;
+}
+
+.darkmode--activated .empty_block {
+  background-color: #00013b;
+  border: #000000 solid 2px;
+}
+.darkmode--activated .empty_block.left_border {
+  border-left-width: 2px;
+}
+.darkmode--activated .empty_block.no_bottom_border {
+  border-bottom-width: 0;
+}
+.darkmode--activated .empty_block.no_top_border {
+  border-top-width: 0;
+}
+.darkmode--activated .empty_block.no_right_border {
+  border-right-width: 0;
+}
+.darkmode--activated .empty_block.no_left_border {
+  border-left-width: 0;
+}
+
+.darkmode--activated button.btn-dark {
+  background-color: #0c0c6d !important;
+}
+
+.darkmode--activated div.value {
+  color: yellow;
 }
 
 /* The Modal (background) */

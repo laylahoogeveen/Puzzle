@@ -14,18 +14,24 @@ function findDoubleCells(clueNum, cell, input) {
 
     var classes = getCellFromID(cell).classList;
     var classesArray = checkClass(classes);
+    var vals = [];
 
     for (var j=0; j < classesArray.length; j++) {
         var clue_index = getIDAndLetterIndex(classesArray[j]);
         var form_clue = clue_index[0];
-        var index = clue_index[1];
 
+        var index = clue_index[1];
         var form = findForm(form_clue);
             if (input != null) {
-                var vals = showCurrentVal(form, index, input);
-                vals.push(form_clue);
+                var val = showCurrentVal(form, index, input);
+                val.push(form_clue);
+                if (form_clue != clueNum) {
+                    var vals = val;
+                }
             }
     }
+
+    console.log(vals);
     if (vals[2] != clueNum && vals[0] != vals[1]) {
         return [vals[0], vals[2]];
     }

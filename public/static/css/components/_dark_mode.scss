@@ -1,12 +1,47 @@
 
-.darkmode--activated {
+  .darkmode--activated {
+    font-weight:500;
+    color: rgb(12, 12, 109);
+  }
+
+
+.darkmode--activated div.clue_num {
     color: #FFFFFF;
-    &.clue_num {
-        color: #FFFFFF;
+  }
+
+.darkmode--activated input.form-control {
+    border: $accent $border-width solid !important;
+  }
+
+  
+  .darkmode--activated .empty_block {
+    background-color: #00013b;
+    border: $text solid $border_width;
+
+    &.left_border {
+        border-left-width: $border_width;
     }
 
-    // &.empty_block {
-    //     border: none;
-    // }
+    &.no_bottom_border {
+        border-bottom-width: 0;
+    }
+    &.no_top_border {
+        border-top-width: 0;
+    }
+
+    &.no_right_border {
+        border-right-width: 0;
+    }
+    &.no_left_border {
+        border-left-width: 0;
+    }
 }
-  
+
+.darkmode--activated button.btn-dark {
+    background-color: rgb(12, 12, 109) !important;
+  }
+
+
+  .darkmode--activated div.value {
+    color: yellow;
+  }

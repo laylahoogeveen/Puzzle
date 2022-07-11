@@ -192,7 +192,6 @@ function showCurrentVal(form, index, letter) {
     var solution_div = $(form).prev().children('p').children(".current_solution").first();
     var current_value = $(solution_div).html();
 
-
     if (current_value == "" || current_value == null) {
         current_value = "-".repeat(form.maxLength);
     }
@@ -212,9 +211,9 @@ function showCurrentVal(form, index, letter) {
         var elem = $(block).find('.value');
         $(elem).html(letter);
     }
-
+    
     var new_value = current_value.replaceAt(index, letter);
-
+    
     $(solution_div).html(new_value);
 
     // jQuery object to DOM element
@@ -261,7 +260,7 @@ function makeChangesList(changes) {
     content += '<ul class="changes_list" role="list">';
     for (var i = 0; i < changes.length; i++) {
         if (changes[i] != "") {
-            content += '<li role="listitem">';
+            content += '<li class="changes_li" role="listitem">';
             var clueNum = changes[i][1];
             var newValue = changes[i][0];
             var clue = puz.allClues[clueNum];
@@ -287,7 +286,7 @@ function makeChangesList(changes) {
         makeAriaLabel(current_solutions[i]);
     }
     alertWindow.style.visibility = "visible";
-    alertWindow.display = "block";
+    alertWindow.display = "flex";
     $(alertWindow).show(100);
 }
 

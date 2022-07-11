@@ -29,7 +29,7 @@ html(lang='nl')
     script(src='static/javascript/grid/modify_grid.js')
     script(src='static/javascript/clues.js')
     script(src='static/javascript/instructions.js')
-    //- script(src='static/javascript/dark_mode.js')  
+    script(src='static/javascript/dark_mode.js')  
     script(src='static/javascript/validate.js')
   
   .container-fluid
@@ -62,13 +62,13 @@ html(lang='nl')
       //- hidden words
       .col-2.vh-80.align-items-center.justify-content-center.hidden-words-col
         .row
-          .col
-            div.hidden-words
+          .col.mh-45
+            div.hidden-words.mh-45
               h2 Verborgen woorden
               div#hidden_word_list
                 span#no_hidden Geen verborgen woorden toegevoegd.
         .row
-          .col
+          .col.mh-30
             div#new-values(role="alert", aria-live="polite")
 
     //- bottom row

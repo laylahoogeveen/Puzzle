@@ -11,12 +11,14 @@
     // scrollbar-gutter: stable;
     padding: 1em;
     border: $accent $border-width solid;
+    // background-color: #FFFFFF;
+
 }
 
 
 .hidden-words {
     @extend .clues;
-    max-height: 60vh;
+    // max-height: 55vh;
 }
 
 
@@ -25,17 +27,38 @@
     margin-top: 1em;
     display: none;
     visibility: hidden;
+    overflow-y: auto;
+    // display: flex;
     // top: 0;
     // right: 0;
-    max-height: 60vh;
+    // max-height: 22vh;
     padding: 1em;
     background-color: #FFFFFF;
     overflow: auto; /* Enable scroll if needed */
     border: $border-width $accent solid;
 }
 
+// .flex-column {
+//     flex-flow: column;
+//     height: 100%;
+//     overflow-y: auto;
+
+// }
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.flex-height {
+    flex: 1;
+}
 
 .hideDiv {
     display: none;
     visibility: hidden;
+}
+ul {
+    &.changes_list {
+        padding-left: 8px;
+    }
 }
