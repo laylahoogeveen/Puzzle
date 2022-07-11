@@ -9,11 +9,7 @@
 
 TO DO
 
-### Technical details
-**Framework:** Node.js
-
-**Programming languages used:** JavaScript, Python
-
+### App description
 
 This repository contains the code for a crossword puzzle that can be solved alone, or in cooperation with others, regardless of their vision. Its auditory representation was designed to be independent of one's cognitive mapping abilities; those who are not able to discern letters and numbers in a grid can view the clues as a list. This puzzle presents a list of clues, along with the number of letters of which the solution consists. The puzzle uses an algorithm to add this number to the clues if it is not present in the clue itself.
 
@@ -24,3 +20,8 @@ The puzzle parses JSON crosswords and cryptograms and employs a Python script to
 All clues are contained in a single list that does not differentiate between horizontal and vertical directions of words. When turning the two lists into one list, the Python script in this prototype made sure that there were no duplicate numbers (e.g. 5 horizontal *and* 5 vertical) and implemented continuous numbering. To still cater to sighted users, tiles light up when navigating to the input field, showing the direction of the word in question.
 
 This puzzle was specially designed to fit the target group's needs: simple though challenging, familiar concepts, Dutch, a high replay value and, lastly, it is a word puzzle. The high replay value is supported by the parsability of existing crosswords, which could allow users to do a new crossword every day. The puzzle is more challenging than existing audio crosswords, as users do not immediately receive feedback on the correctness of their words. Treating clues as loose elements defeats the purpose of a crossword. To declutter the clue list, users are allowed to temporarily hide clues by moving them to another column, e.g. whenever they think their answer is correct. Clues can always be moved back to the main list and words in the hidden column are not "frozen"; their value can still change as a result of moves in intersecting words.
+
+### Technical details
+**Framework:** Node.js
+
+**Programming languages used:** JavaScript, Python
