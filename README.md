@@ -2,6 +2,7 @@
 
 *Author: Layla Hoogeveen, University of Amsterdam, submitted in partial fulfillment for the degree of master of science*
 *This study was completed in collaboration with [Q42](https://www.q42.nl/).*
+
 [Link to working prototype](https://layla.nl/kruiswoord/)
 
 ## Demo
