@@ -7,7 +7,7 @@
 
 ## Demo
 
-TO DO
+[<img src="https://i.ytimg.com/vi/oZrvZQ0NdCM/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=Hc79sDi3f0U "Demo video using screen reader")
 
 ### App description
 
