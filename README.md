@@ -9,7 +9,7 @@
 
 Watch the demo video on YouTube:
 
-[<img src="https://i.ytimg.com/vi/oZrvZQ0NdCM/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=oZrvZQ0NdCM "Demo video using screen reader")
+[<img src="https://i.ytimg.com/vi/cBXdiAhb0qI/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=cBXdiAhb0qI "Demo video using screen reader")
 
 ### App description
 
