@@ -96,36 +96,29 @@ function showInGrid(clueNum, input, wordLength) {
             addToGrid(cells[i], input[i]);
         }
         else {
-                var classes = getCellFromID(cells[i]).classList;
-                var classesArray = checkClass(classes);
-                if (classesArray.length > 1 ) {
-                    for (var j = 0; j < classesArray.length; j++) {
-                        
-                        var clue_index = getIDAndLetterIndex(classesArray[j]);
-                        var form_clue = clue_index[0];
-                        var indexje = clue_index[1];
-                        if (form_clue != clueNum) {
-                            var form = findForm(form_clue);
-    
-                            if (form.value[indexje] == null) {
-                                addToGrid(cells[i], ""); 
-                            }
+            var classes = getCellFromID(cells[i]).classList;
+            var classesArray = checkClass(classes);
+            if (classesArray.length > 1 ) {
+                for (var j = 0; j < classesArray.length; j++) {
+                    
+                    var clue_index = getIDAndLetterIndex(classesArray[j]);
+                    var form_clue = clue_index[0];
+                    var indexje = clue_index[1];
+                    if (form_clue != clueNum) {
+                        var form = findForm(form_clue);
 
-                            // if backspace or not finished, do not change if intersecting word has value
-                            if (form.value[indexje] != null) {
-                                addToGrid(cells[i], form.value[indexje]); 
-                            }
+                        if (form.value[indexje] == null) {
+                            addToGrid(cells[i], ""); 
+                        }
+
+                        // if backspace or not finished, do not change if intersecting word has value
+                        if (form.value[indexje] != null) {
+                            addToGrid(cells[i], form.value[indexje]); 
                         }
                     }
                 }
-                // else {
-                //     addToGrid(cells[i], ""); 
-                // }
+            }
         }
     }
-
-    // for (var j = 0; j < cells.length; j++) {
-    //     doubles = findDoubleCells(clueNum, cells[j], input[j]);
-    // }
 
 }

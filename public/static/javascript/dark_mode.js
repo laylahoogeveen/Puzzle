@@ -24,10 +24,6 @@ function addDarkmodeWidget() {
     btn.innerHTML = "donkere modus";
     btn.style.fontSize = "0.65em";
     btn.style.color = "#FEF3C9";
-    // btn.style.width = "4rem";
-    // btn.style.height = "4rem";
-    // btn_bg.style.width = "4.9rem";
-    // btn_bg.style.height = "4.9rem";
         
     var windowWidth = window.innerWidth;
     if (windowWidth < 500) {

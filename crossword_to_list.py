@@ -2,6 +2,8 @@ import json
 import os
 
 class Puzzle:
+    '''Parse puzzle and add grid coordinates of all words to JSON file
+    + implement continuous numbering'''
 
     def __init__(self, puzzle):
         
@@ -18,8 +20,6 @@ class Puzzle:
         self.total_words = self.find_number_of_words()
         self.find_doubles()
         self.words_indices = self.make_word_indices()
-
-        
 
     def find_number_of_words(self):
         '''Find the total number of words in puzzle'''
@@ -141,20 +141,18 @@ if __name__ == "__main__":
         json.dump(data, json_file)
     f.close()
 
-
-      # def get_shared_values(self, word_num, values):
-    #     '''Check whether box shares letters with other words'''
-    #     shared = {}
-    #     for i in values:
-    #         if self.values[i] != 0 and self.values[i] != word_num:
-    #             shared[i]
+    def get_shared_values(self, word_num, values):
+        '''Check whether box shares letters with other words'''
+        shared = {}
+        for i in values:
+            if self.values[i] != 0 and self.values[i] != word_num:
+                shared[i]
         
-    # def get_word_indices(self):
 
-    # def list_to_grid(self, values, width):
-    #     '''Split values list into multiple lists to create matrix'''
+    def list_to_grid(self, values, width):
+        '''Split values list into multiple lists to create matrix'''
 
-    #     chunked_list = []
-    #     for i in range(0, len(values), width):
-    #         chunked_list.append(values[i:i+width])
-    #     return chunked_list
+        chunked_list = []
+        for i in range(0, len(values), width):
+            chunked_list.append(values[i:i+width])
+        return chunked_list

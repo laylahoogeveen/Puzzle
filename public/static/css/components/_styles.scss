@@ -6,13 +6,13 @@ body {
     font-family: "Karla", "Arial Nova", sans-serif;
 }
 
-
 h1 {
     font-size: 1.8em;
     color: $accent;
     text-align: center;
 }
 
+// Need to find a way to automate this...
 .vh {
     &-10 {
         height: 10vh;
@@ -90,7 +90,6 @@ h2 {
             background-color: $accent_dark !important;
             box-shadow: none !important;
             outline: none !important;
-
         }
         
         &:active {
@@ -102,85 +101,64 @@ h2 {
 
 }
 
-/* Designing for scroll-bar */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #FFFFFF;
     border: $border-width $accent solid;
     border-right-width: 0;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: $accent;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: $accent_dark;
 }
 
-/* The Modal (background) */
 .result-modal {
-    display: none; /* Hidden by default */
+    display: none;
     visibility: hidden;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: #FFFFFF; /* Fallback color */
-    background-color: rgba(56, 60, 97, 0.5); /* Black w/ opacity */
+    width: 100%;
+    height: 100%; 
+    background-color: #FFFFFF;
+    background-color: rgba(56, 60, 97, 0.5);
   }
 
-  #modal-text {
-    overflow-y: scroll; /* Enable scroll if needed */
+#modal-text {
+    overflow-y: scroll;
     padding: 1em;
     &::-webkit-scrollbar-track {
         background: #FFFFFF;
         border: none !important;
     }
-    
-
-  }
+}
   
-
-  /* Modal Content/Box */
-  .modal-content {
+.modal-content {
     padding: 0;
     background-color: #FFFFFF;
-    margin: 10vh auto 10vh auto; /* 15% from the top and centered */
+    margin: 10vh auto 10vh auto;
     max-height: 80vh;
     width: max-content;
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto;
     border: $border-width $accent solid;
 
   }
 
-  .no-display {
+.no-display {
     opacity: 0;
     font-size: 0;
     color: #FFFFFF;
   }
 
-//   @media screen and (orientation:landscape) {
-//     .modal-content {
-//         max-width: 50vw;
-//     }
-//   }
-  
-//   ul {
-//     .results_list {
-//         list-style-type: none;
-//     }
-//   }
-  /* The Close Button */
-  .close-modal {
+.close-modal {
     color: $accent;
     float: right;
     position: sticky;
@@ -194,6 +172,8 @@ h2 {
     }
   }  
 
+
+/* For testing */
 .border {
     &-green {
         border: green 2px solid;

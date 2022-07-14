@@ -34,7 +34,7 @@ function getNonEmptyValue(element) {
 }
 
 // function highLightWrong() {
-
+// to do
 // }
 
 function showCorrection(points, totalPoints) {
@@ -62,8 +62,6 @@ function showCorrection(points, totalPoints) {
     message += "<p>Incorrecte woorden waren: </p> </div>";
     message += "<ul class='results_list'>";
     
-
-
     for (var i = 0; i < incorrectWords.length; i++) {   
         message += "<li class='results_list_item'><strong>";
         // Clue number
@@ -86,15 +84,11 @@ function showCorrection(points, totalPoints) {
     message += "</p>";
 
     alertResult(message);
-
-
-    // if ij
-    
 }
 
 
 function alertResult(message) {
-    // Show message with results
+// Show message with results
     
     // Get the modal
     var modal = document.getElementById("myModal");

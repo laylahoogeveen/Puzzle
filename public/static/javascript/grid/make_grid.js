@@ -30,7 +30,6 @@ class Puzzle {
             ...this.hclues
         };
         this.allWords = {...this.hwords,...this.vwords};
-
         this.numClues = (Object.keys(this.allClues).length);
     }
 }
@@ -41,9 +40,6 @@ window.onload = (event) =>{
     document.documentElement.setAttribute("lang", "nl");
     $("html").attr("lang", "nl");
 
-    // var data2 = fetch('/route').then(res => res.json()).then(data => {
-    //     return data;
-    // })
     window.puz = new Puzzle(data);
     createTable();
     populateBoxes();
@@ -103,9 +99,7 @@ function createTable() {
 }
 
 function cellSize () {
-
-    // Make sure cells are as wide as possible and as tall as wide
-    
+// Make sure cells are as wide as possible and as tall as wide 
     var tableWidth = document.getElementById('table_table').getBoundingClientRect().width;
     var cellWidth = tableWidth / (puz.width + 1);
     var cells = document.getElementsByClassName('block');
@@ -124,8 +118,7 @@ function cellSize () {
 }
 
 function populateBoxes() {
-
-    // Add coloured background to all empty blocks
+// Add coloured background to all empty blocks
     for (var i=0; i<puz.values.length; i++) {
         if (puz.values[i] == "@") {
             $('#' + i).addClass("empty_block");
@@ -152,7 +145,7 @@ function populateBoxes() {
         }
     });
 
-        // Remove cell borders if empty tiles are adjacent (vertically)
+    // Remove cell borders if empty tiles are adjacent (vertically)
     $(".empty_block").each(function() {
         var row = $(this).parent('tr');
        
