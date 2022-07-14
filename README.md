@@ -7,7 +7,7 @@
 
 ## Demo
 
-Watch the demo video on YouTube:
+Watch the demo video on YouTube (English subtitles available):
 
 [<img src="https://i.ytimg.com/vi/cBXdiAhb0qI/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=cBXdiAhb0qI "Demo video using screen reader")
 
